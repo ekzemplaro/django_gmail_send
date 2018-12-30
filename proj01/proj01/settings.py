@@ -15,8 +15,7 @@ import os
 
 env = environ.Env(DEBUG=(bool, False),) # set default values and casting
 environ.Env.read_env('.env') # reading .env file
-
-MAIL_FROM = env('MAIL_FROM')
+#
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
