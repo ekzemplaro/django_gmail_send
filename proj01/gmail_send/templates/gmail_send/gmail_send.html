@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8" />
+{% load static %}
+<script src="{% static 'gmail_send/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'gmail_send/gmail_send.js' %}"></script>
+<link rel="stylesheet" href="{% static 'gmail_send/gmail_send.css' %}">
+<title>gmail_send</title>
+</head>
+<body>
+<h2>Gmail Send</h2>
+{{ hour }}時{{ minute }}分です。<br>
+{{ message | safe }}<p />
+<hr />
+<span class='green'>green</span>
+<span class='red'>red</span>
+<span class='blue'>blue</span>
+<hr />
+宛先&nbsp;<input type="text" id="mail_to" /><p />
+タイトル&nbsp;<input type="text" id="subject" /><p />
+メッセージ&nbsp;<textarea id="str_text" cols="50" rows="10"></textarea><p />
+<button class="check" id="submit">送信</button>
+<hr />
+<div id="outarea_aa">outarea_aa</div>
+<div id="outarea_bb">outarea_bb</div>
+<div id="outarea_cc">outarea_cc</div>
+<div id="outarea_dd">outarea_dd</div>
+<div id="outarea_ee">outarea_ee</div>
+<div id="outarea_ff">outarea_ff</div>
+<div id="outarea_gg">outarea_gg</div>
+<div id="outarea_hh">outarea_hh</div>
+<hr />
+home.html<p />
+Dec/30/2018 PM 16:11<p />
+</body>
+</html>
