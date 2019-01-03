@@ -2,7 +2,7 @@
 #
 #	gmail_send.py
 #
-#					Dec/30/2018
+#					Jan/03/2019
 # ------------------------------------------------------------------
 import httplib2
 import os
@@ -14,8 +14,9 @@ import argparse
 from oauth2client import file, client, tools
 # ------------------------------------------------------------------
 import base64
-from email.mime.text import MIMEText
+#from email.mime.text import MIMEText
 from email.utils import formatdate
+from email.message import EmailMessage
 import traceback
 
 SCOPES = "https://www.googleapis.com/auth/gmail.send"
@@ -45,7 +46,8 @@ def get_credentials(flags):
 # ------------------------------------------------------------------
 # [6-8]:
 def create_message(mail_to,subject,str_message):
-	message = MIMEText(str_message)
+	message = EmailMessage()
+	message.set_content(str_message)
 #
 	message["to"] = mail_to
 	message["subject"] = subject

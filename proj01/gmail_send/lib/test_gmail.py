@@ -26,11 +26,11 @@ environ.Env.read_env('.env') # reading .env file
 userId = env('userId')
 mail_to = "ccc@example.com"
 #
-subject = "Gmail Api Test Dec/30/2018 PM 18:43"
+subject = "Gmail Api Test Jan/03/2018 PM 17:11"
 str_message = ""
 str_message += "おはよう\n"
 str_message += "晴れています。\n"
-str_message += "Dec/30/2018 PM 18:43\n"
+str_message += "Jan/03/2018 PM 17:11\n"
 #
 print(flags)
 #
